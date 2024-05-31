@@ -9,7 +9,7 @@ export default class Aluno extends Model {
         validate: {
           len: {
             args: [3, 255],
-            msg: 'The name field must have between 3 and 255 characters.',
+            msg: 'The name field must contain between 3 and 255 characters.',
           },
         },
       },
@@ -19,7 +19,7 @@ export default class Aluno extends Model {
         validate: {
           len: {
             args: [3, 255],
-            msg: 'The lastname field must have between 3 and 255 characters.',
+            msg: 'The lastname field must contain between 3 and 255 characters.',
           },
         },
       },
@@ -27,11 +27,11 @@ export default class Aluno extends Model {
         type: Sequelize.STRING,
         defaultValue: '',
         unique: {
-          msg: 'Email already exists ',
+          msg: 'This email address already exists.',
         },
         validate: {
           isEmail: {
-            msg: 'Email sent is incorrect or invalid.',
+            msg: 'The email address provided is incorrect or invalid.',
           },
         },
       },
@@ -40,7 +40,7 @@ export default class Aluno extends Model {
         defaultValue: '',
         validate: {
           isInt: {
-            msg: 'Age need a integer number',
+            msg: 'Age must be a whole number.',
           },
         },
       },
@@ -49,7 +49,7 @@ export default class Aluno extends Model {
         defaultValue: '',
         validate: {
           isFloat: {
-            msg: 'Weight need a integer or float number',
+            msg: 'Weight must be a whole number or a decimal.',
           },
         },
       },
@@ -58,7 +58,7 @@ export default class Aluno extends Model {
         defaultValue: '',
         validate: {
           isFloat: {
-            msg: 'Height need a integer or float number',
+            msg: 'Height must be a whole number or a decimal.',
           },
         },
       },

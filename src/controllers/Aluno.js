@@ -1,6 +1,6 @@
 import Aluno from '../models/Aluno';
 
-class Home {
+class AlunoController {
   async index(req, res) {
     const alunos = await Aluno.findAll();
     res.json(alunos);
@@ -11,7 +11,7 @@ class Home {
       const { id } = req.params;
       if (!id) {
         return res.status(400).json({
-          errors: ['ID dont exist'],
+          errors: ["ID doesn't exist"],
         });
       }
 
@@ -19,7 +19,7 @@ class Home {
 
       if (!aluno) {
         return res.status(400).json({
-          errors: ['Aluno dont exist'],
+          errors: ["Aluno doesn't exist"],
         });
       }
 
@@ -47,7 +47,7 @@ class Home {
       const { id } = req.params;
       if (!id) {
         return res.status(400).json({
-          errors: ['ID dont exist'],
+          errors: ["ID doesn't exist"],
         });
       }
 
@@ -55,7 +55,7 @@ class Home {
 
       if (!aluno) {
         return res.status(400).json({
-          errors: ['Aluno dont exist'],
+          errors: ["Aluno doesn't exist"],
         });
       }
 
@@ -74,7 +74,7 @@ class Home {
       const { id } = req.params;
       if (!id) {
         return res.status(400).json({
-          errors: ['ID dont exist'],
+          errors: ["ID doesn't exist"],
         });
       }
 
@@ -82,7 +82,7 @@ class Home {
 
       if (!aluno) {
         return res.status(400).json({
-          errors: ['Aluno dont exist'],
+          errors: ["Aluno doesn't exist"],
         });
       }
       await aluno.destroy(aluno);
@@ -97,4 +97,4 @@ class Home {
   }
 }
 
-export default new Home();
+export default new AlunoController();
