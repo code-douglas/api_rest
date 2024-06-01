@@ -19,6 +19,7 @@ class AlunoController {
       include: {
         model: Photos,
         attributes: [
+          'url',
           'filename',
         ],
       },
@@ -51,6 +52,7 @@ class AlunoController {
         include: {
           model: Photos,
           attributes: [
+            'url',
             'filename',
           ],
         },
