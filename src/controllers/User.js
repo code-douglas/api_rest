@@ -49,7 +49,9 @@ class UserModel {
 
       await user.destroy();
 
-      return res.json(null);
+      return res.json({
+        Deletado: 'True',
+      });
     } catch (e) {
       return res.status(400).json({
         errors: e.errors.map((error) => error.message),

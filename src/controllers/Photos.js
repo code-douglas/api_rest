@@ -12,12 +12,17 @@ class PhotosController {
           errors: [err.code],
         });
       }
+      try {
+        const { originalname, filename } = req.file;
+        const { aluno_id } = req.body;
+        const photo = await Photo.create({ originalname, filename, aluno_id });
 
-      const { originalname, filename } = req.file;
-      const { aluno_id } = req.body;
-      const photo = await Photo.create({ originalname, filename, aluno_id });
-
-      return res.json(photo);
+        return res.json(photo);
+      } catch (e) {
+        return res.status(404).json({
+          errors: ["Aluno doesn't exist"],
+        });
+      }
     });
   }
 }
