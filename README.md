@@ -14,9 +14,16 @@
 
 - Instalação de pacotes e dependencias de desenvolvimento, utilize o comando npm install ou npm i 
 
-- Criar um arquivo .env que vai conter o IP do seu servidor, a porta, senha do banco de dados, nome do banco de dados, qual banco de dados está sendo utilizado, seu usuário root, um tempo de expiração de sessões dentro do seu projeto.
+- Criar um arquivo .env que vai conter:
+  - o IP do seu servidor
+  - A porta do seu servidor 
+  - A senha do banco de dados
+  - O nome do banco de dados
+  - Qual banco de dados está sendo utilizado
+  - O seu usuário root
+  - O tempo de expiração de sessões dentro do seu projeto.
 
-- Criado e adicionado o .env ao seu diretório principal, agr vem a parte onde você roda a API em desenvolvimento.
+- Criado e adicionado o .env ao seu diretório principal, agora vem a parte onde você roda a API em desenvolvimento.
 
 ### Comando utilizados para subir a API em desenvolvimento 
 
